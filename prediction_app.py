@@ -11,7 +11,7 @@ import streamlit as st
 
 
 #loading the data
-load_model = pickle.load(open('C:/Users/victoria/Desktop/ML/project - milling prediction/prediction_model.pkl', 'rb'))
+load_model = pickle.load(open('prediction_model.pkl', 'rb'))
 
 
 
