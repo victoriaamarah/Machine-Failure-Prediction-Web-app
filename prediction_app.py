@@ -17,30 +17,6 @@ load_model = pickle.load(open('prediction_model.pkl', 'rb'))
 
 
 
-
-#renaming the columns
-#import pandas as pd
-
-#dataset_source = 'C:/Users/victoria/Untitled Folder 3/cleaned_dataset.csv'
-#dataset = pd.read_csv(dataset_source)
-
-#dataset.rename(columns = {'Air temperature [K]':'Air_temperature',
-#                     'Process temperature [K]':'Process_temperature',
-#                     'Rotational speed [rpm]':'Rotational_speed',
-#                     'Torque [Nm]':'Torque',
-#                     'Tool wear [min]':'Tool_wear'},
-#          inplace = True)
-
-#dataset['Power'] = dataset['Rotational_speed'] * dataset['Torque']
-#dataset['Temperature difference'] = dataset['Process_temperature'] - dataset['Air_temperature']
-#dataset['Strain'] = dataset['Torque'] * dataset['Tool_wear']
-
-
-
-
-
-
-
 #creating a function for prediction
 
 def milling_machine_prediction(Air_temperature, Process_temperature, Rotational_speed, Torque, Tool_Wear, Type):
@@ -112,7 +88,7 @@ def main():
     
    
     #giving the webpage a title
-    st.title('Failure Prediction Web App')
+    st.title('Milling Machine Failure Prediction')
     
     st.write("""
     This application predicts potential failures in milling machines by analyzing various input parameters.
